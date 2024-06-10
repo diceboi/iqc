@@ -21,7 +21,7 @@ export default function Services() {
                             src="/images/assembly-front.webp"
                             fill
                             style={{ objectFit: "cover" }}
-                            className=" mix-blend-luminosity hover:mix-blend-normal hover:grayscale hover:scale-105 rounded-2xl opacity-50 hover:opacity-100 transition-all duration-200"
+                            className="md:mix-blend-luminosity mix-blend-normal hover:mix-blend-normal md:grayscale-0 grayscale hover:grayscale hover:scale-105 rounded-2xl md:opacity-50 opacity-100 hover:opacity-100 transition-all duration-200"
                         />
                         <h3 className="absolute right-4 bottom-2 z-10 text-2xl font-switzer font-bold uppercase text-white text-right">Assembly</h3>
                     </div>
@@ -38,7 +38,7 @@ export default function Services() {
                             src="/images/metal-working-front.webp"
                             fill
                             style={{ objectFit: "cover" }}
-                            className=" mix-blend-luminosity hover:mix-blend-normal hover:grayscale hover:scale-105 rounded-2xl opacity-50 hover:opacity-100 transition-all duration-200"
+                            className="md:mix-blend-luminosity mix-blend-normal hover:mix-blend-normal md:grayscale-0 grayscale hover:grayscale hover:scale-105 rounded-2xl md:opacity-50 opacity-100 hover:opacity-100 transition-all duration-200"
                         />
                         <h3 className="absolute right-4 bottom-2 z-10 text-2xl font-switzer font-bold uppercase text-white text-right">Metal Working</h3>
                     </div>
@@ -55,7 +55,7 @@ export default function Services() {
                             src="/images/logistics-front.webp"
                             fill
                             style={{ objectFit: "cover" }}
-                            className=" mix-blend-luminosity hover:mix-blend-normal hover:grayscale hover:scale-105 rounded-2xl opacity-50 hover:opacity-100 transition-all duration-200"
+                            className="md:mix-blend-luminosity mix-blend-normal hover:mix-blend-normal md:grayscale-0 grayscale hover:grayscale hover:scale-105 rounded-2xl md:opacity-50 opacity-100 hover:opacity-100 transition-all duration-200"
                         />
                         <h3 className="absolute right-4 bottom-2 z-10 text-2xl font-switzer font-bold uppercase text-white text-right">Logistic Services</h3>
                     </div>
@@ -72,7 +72,7 @@ export default function Services() {
                             src="/images/engeneering-front.webp"
                             fill
                             style={{ objectFit: "cover" }}
-                            className=" mix-blend-luminosity hover:mix-blend-normal hover:grayscale hover:scale-105 rounded-2xl opacity-50 hover:opacity-100 transition-all duration-200"
+                            className="md:mix-blend-luminosity mix-blend-normal hover:mix-blend-normal md:grayscale-0 grayscale hover:grayscale hover:scale-105 rounded-2xl md:opacity-50 opacity-100 hover:opacity-100 transition-all duration-200"
                         />
                         <h3 className="absolute right-4 bottom-2 z-10 text-2xl font-switzer font-bold uppercase text-white text-right">Engeneering services</h3>
                     </div>
@@ -89,7 +89,7 @@ export default function Services() {
                             src="/images/labor-front.webp"
                             fill
                             style={{ objectFit: "cover" }}
-                            className=" mix-blend-luminosity hover:mix-blend-normal hover:grayscale hover:scale-105 rounded-2xl opacity-50 hover:opacity-100 transition-all duration-200"
+                            className="md:mix-blend-luminosity mix-blend-normal hover:mix-blend-normal md:grayscale-0 grayscale hover:grayscale hover:scale-105 rounded-2xl md:opacity-50 opacity-100 hover:opacity-100 transition-all duration-200"
                         />
                         <h3 className="absolute right-4 bottom-2 z-10 text-2xl font-switzer font-bold uppercase text-white text-right">Labor Hire</h3>
                     </div>

@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section className='container mx-auto relative flex flex-col items-center justify-center mt-20 pb-20 border-t border-x border-[#ddd] cross-top-left'>
         <motion.video
-          className='absoluite w-full h-[50vh] top-0 left-0 object-cover opacity-30'
+          className='absoluite w-full lg:h-[50vh] h-[100vh] top-0 left-0 object-cover opacity-30'
           src={require('@/public/IQC.mp4')}
           autoPlay
           muted
