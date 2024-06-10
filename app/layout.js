@@ -1,7 +1,11 @@
-import { Inter } from "next/font/google";
+import localFont from 'next/font/local'
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const switzer = localFont({
+  src: './fonts/Switzer-Variable.woff2',
+  display: 'swap',
+  variable: '--font-switzer'
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${switzer.variable}`}>{children}</body>
     </html>
   );
 }

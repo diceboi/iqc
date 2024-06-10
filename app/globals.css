@@ -3,31 +3,150 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    --blue:#248cbc;
+    --white: #fff;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    background-color: #fafafa;
+    padding-left: 22px;
+    padding-right: 22px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.font-switzer {
+    font-family: var(--font-switzer);
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--font-switzer);
+}
+
+.ruled-grid {
+    --gap: 2em;
+    --line-thickness: 1px;
+    --line-color: #ddd;
+    --line-offset:calc(var(--gap) / 2);
+
+    display: grid;
+    grid-auto-rows: minmax(min-content, 1fr);
+    align-items: stretch;
+    /*gap: var(--gap);*/
+    overflow: hidden;
+}
+
+.ruled-grid > .card {
+    position: relative;
+    padding: 1.5em;
+}
+
+.ruled-grid > .card::before,
+.ruled-grid > .card::after {
+    content: "";
+    background-color: var(--line-color);
+    position: absolute;
+    z-index: 0;
+}
+
+.ruled-grid > .card::after {
+    width: 1íívw;
+    height: var(--line-thickness);
+    top: calc(var(--line-offset) * -1);
+    left: 0;
+}
+
+.ruled-grid > .card::before {
+    width: 100vw;
+    height: var(--line-thickness);
+    top: 0;
+    left: calc(var(--line-offset) * -1)
+}
+
+.cross-top-left::after {
+    position: absolute;
+    background-color: #000;
+    content: "";
+    width: 20px;
+    height: 1px;
+    top: -1px;
+    left: -10px;
+    z-index: 10;
+}
+
+.cross-top-left::before {
+    position: absolute;
+    background-color: #000;
+    content: "";
+    width: 1px;
+    height: 20px;
+    top: -10px;
+    left: -1px;
+    z-index: 10;
+}
+
+.cross-top-right::after {
+    position: absolute;
+    background-color: #000;
+    content: "";
+    width: 20px;
+    height: 1px;
+    top: -1px;
+    right: -10px;
+    z-index: 10;
+}
+
+.cross-top-right::before {
+    position: absolute;
+    background-color: #000;
+    content: "";
+    width: 1px;
+    height: 20px;
+    top: -10px;
+    right: -1px;
+    z-index: 10;
+}
+
+.cross-bottom-left::after {
+    position: absolute;
+    background-color: #000;
+    content: "";
+    width: 20px;
+    height: 1px;
+    bottom: -1px;
+    left: -9px;
+    z-index: 10;
+}
+
+.cross-bottom-left::before {
+    position: absolute;
+    background-color: #000;
+    content: "";
+    width: 1px;
+    height: 20px;
+    bottom: -10px;
+    left: 0px;
+    z-index: 10;
+}
+
+.cross-bottom-right::after {
+    position: absolute;
+    background-color: #000;
+    content: "";
+    width: 20px;
+    height: 1px;
+    bottom: -1px;
+    right: -9px;
+    z-index: 10;
+}
+
+.cross-bottom-right::before {
+    position: absolute;
+    background-color: #000;
+    content: "";
+    width: 1px;
+    height: 20px;
+    bottom: -10px;
+    right: 0px;
+    z-index: 10;
 }

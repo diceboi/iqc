@@ -14,5 +14,14 @@ module.exports = {
       },
     },
   },
+  container: {
+    screens: {
+      sm: '600px',
+      md: '728px',
+      lg: '840px',
+      xl: '984px',
+      '2xl': '1280px',
+    },
+  },
   plugins: [],
 };
