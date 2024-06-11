@@ -20,7 +20,7 @@ export default function Services() {
             <div className="ruled-grid lg:grid-cols-3 grid-cols-1 grid-rows-2 min-h-[500px] border-b border-[#ddd] cross-top">
                 <div className="card flex items-start justify-start">
                 <div className="absolute -left-0 lg:top-0 top-0 -translate-y-1/2 w-[30vw] h-[50vh] bg-[--blue] blur-3xl rounded-full opacity-20"></div>
-                    <h2 className="lg:text-5xl text-3xl font-switzer font-bold uppercase text-[--blue]">Services</h2>
+                    <h2 className="lg:text-5xl text-3xl font-switzer font-bold uppercase text-[--blue]">What we do?</h2>
                 </div>
                 <div className="card">
 

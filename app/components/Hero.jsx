@@ -5,8 +5,21 @@ import { FaPlay } from "react-icons/fa";
 import { motion } from "framer-motion"
 import MainButton from "./UI/MainButton"
 import SecondaryButton from "./UI/SecondaryButton";
+import { useState } from "react";
+import Modal from "./UI/Modal";
 
 export default function Hero() {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+    
+    const openModal = () => {
+        setIsModalOpen(true);
+      };
+    
+      const closeModal = () => {
+        setIsModalOpen(false);
+      };
+
   return (
     <section className='container mx-auto relative flex flex-col items-center justify-center pb-20 border-t border-x border-[#ddd] cross-top-left'>
         <motion.video
@@ -76,8 +89,8 @@ export default function Hero() {
               <h1 className="lg:text-7xl text-5xl font-bold text-black uppercase font-switzer">together</h1>
             </div>
             <div className="flex lg:flex-row flex-col gap-4 items-center justtify-center pt-10">
-              <MainButton text={"Watch the video"} link={"#"} icon={<FaPlay />} />
-              <SecondaryButton text={"Contact us"} link={"mailto:hello@iqc-services.hu"} icon={""} />
+              <Modal isOpen={isModalOpen} closeModal={closeModal} />
+              <MainButton text={"Watch the video"} link={""} onclick={openModal} icon={<FaPlay />} />
             </div>
             
           </div>
