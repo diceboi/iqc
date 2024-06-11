@@ -8,18 +8,18 @@ import SecondaryButton from "./UI/SecondaryButton";
 
 export default function Hero() {
   return (
-    <section className='container mx-auto relative flex flex-col items-center justify-center mt-20 pb-20 border-t border-x border-[#ddd] cross-top-left'>
+    <section className='container mx-auto relative flex flex-col items-center justify-center pb-20 border-t border-x border-[#ddd] cross-top-left'>
         <motion.video
-          className='absoluite w-full lg:h-[50vh] h-[100vh] top-0 left-0 object-cover opacity-30'
+          className='absoluite w-full lg:h-[50vh] h-[60vh] top-0 left-0 object-cover opacity-30'
           src={require('@/public/IQC.mp4')}
           autoPlay
           muted
           loop
           whileInView={{ }}
         />
-        <div className="absolute w-full h-[50vh] left-0 top-0 bg-[#fff] mix-blend-color"></div>
+        <div className="absolute w-full lg:h-[50vh] h-[60vh] left-0 top-0 bg-[#fff] mix-blend-color"></div>
 
-        <div className='absolute container m-auto flex flex-col justify-center items-center h-[80vh]'>
+        <div className='absolute container m-auto flex flex-col justify-center items-center lg:h-[50vh] h-[60vh]'>
           <div className="flex flex-col gap-5 justify-center items-center font-switzer">
             <div className="flex md:flex-row flex-col md:gap-4 gap-0">
               <h1 className='lg:text-7xl text-5xl font-bold text-black uppercase font-switzer'>build</h1>
@@ -77,7 +77,7 @@ export default function Hero() {
             </div>
             <div className="flex lg:flex-row flex-col gap-4 items-center justtify-center pt-10">
               <MainButton text={"Watch the video"} link={"#"} icon={<FaPlay />} />
-              <SecondaryButton text={"Contact us"} link={"#"} icon={""} />
+              <SecondaryButton text={"Contact us"} link={"mailto:hello@iqc-services.hu"} icon={""} />
             </div>
             
           </div>

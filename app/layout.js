@@ -1,5 +1,7 @@
 import localFont from 'next/font/local'
 import "./globals.css";
+import MainNav from './components/MainNav';
+import Footer from './components/Footer';
 
 const switzer = localFont({
   src: './fonts/Switzer-Variable.woff2',
@@ -15,7 +17,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${switzer.variable}`}>{children}</body>
+      <body className={`${switzer.variable}`}>
+        <MainNav/>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
