@@ -9,7 +9,7 @@ export default function About() {
         <section>
             <div className="relative grid grid-cols-1 lg:grid-cols-3 container mx-auto border-b border-[#ddd] cross-top-right">
                 <div className="relative ruled-grid grid-cols-2 grid-rows-1 col-span-2 border-x lg:border-l border-[#ddd]">
-                    <div className="card lg:border-r border-[#ddd] min-h-[200px] card col-span-2 row-span-2 lg:col-span-1 lg:row-span-1">
+                    <div className="card lg:border-r border-[#ddd] lg:min-h-[400px] min-h-[200px] card col-span-2 row-span-2 lg:col-span-1 lg:row-span-1">
                         <div className="relative w-full h-full">
                             <Image 
                                 src="/images/assembly-5.webp" 
