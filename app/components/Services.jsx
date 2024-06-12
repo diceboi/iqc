@@ -95,12 +95,12 @@ export default function Services() {
                         close={() => setOpen2(false)}
                         slides={[
                         { src: "/images/logistics-1.webp" },
-                        { src: "/images/logistics-2.webp" },
                         { src: "/images/logistics-3.webp" },
                         { src: "/images/logistics-4.webp" },
                         { src: "/images/logistics-5.webp" },
                         { src: "/images/logistics-6.webp" },
                         { src: "/images/logistics-7.webp" },
+                        { src: "/images/logistics-8.webp" },
                         ]}
                     />
 
@@ -133,6 +133,8 @@ export default function Services() {
                         { src: "/images/engeneering-5.webp" },
                         { src: "/images/engeneering-6.webp" },
                         { src: "/images/engeneering-7.webp" },
+                        { src: "/images/engeneering-8.webp" },
+                        { src: "/images/engeneering-9.webp" },
                         ]}
                     />
 
@@ -159,7 +161,7 @@ export default function Services() {
                         close={() => setOpen4(false)}
                         slides={[
                         { src: "/images/labor-1.webp" },
-                        { src: "/images/labor-2.webp" },
+                        { src: "/images/labor-6.webp" },
                         { src: "/images/labor-3.webp" },
                         { src: "/images/labor-4.webp" },
                         { src: "/images/labor-5.webp" },
