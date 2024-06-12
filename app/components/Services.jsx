@@ -149,7 +149,7 @@ export default function Services() {
                             style={{ objectFit: "cover" }}
                             className="md:mix-blend-luminosity mix-blend-normal hover:mix-blend-normal md:grayscale-0 grayscale hover:grayscale hover:scale-105 rounded-2xl md:opacity-50 opacity-100 hover:opacity-100 transition-all duration-200"
                         />
-                        <h3 className="absolute right-4 bottom-2 z-10 text-2xl font-switzer font-bold uppercase text-white text-right">Engeneering services</h3>
+                        <h3 className="absolute right-4 bottom-2 z-10 text-2xl font-switzer font-bold uppercase text-white text-right">Engineering services</h3>
                     </div>
                 </div>
                 <div className="card">

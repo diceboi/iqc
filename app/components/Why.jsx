@@ -12,7 +12,7 @@ export default function Why() {
                 <div className="ruled-grid col-span-1 overflow-hidden lg:border-l border-[#ddd]">
                     <div className="card flex flex-col justify-center gap-4 col-span-2">
                         <h2 className="lg:text-5xl text-3xl font-switzer font-bold uppercase text-[--blue]">Why us?</h2>
-                        <p>Our motto is not only put together what the customer asks, but constantly thinking together to develop and rationalize the production, the components, and even the product itself. We believe that proactivity and quick, precise work will bring long and prosperous relationship with our customers.</p>
+                        <p className="text-justify">Our motto is not only put together what the customer asks, but constantly thinking together to develop and rationalize the production, the components, and even the product itself. We believe that proactivity and quick, precise work will bring long and prosperous relationship with our customers.</p>
                         <MainButton text={"Let's work together"} link={"mailto:hello@iqc-services.hu"} icon={""}/>
                     </div>
                 </div> 
@@ -31,7 +31,7 @@ export default function Why() {
                     <div className="card col-span-2 row-span-2 lg:col-span-1 lg:row-span-1">
                         <div className="relative w-full h-full">
                         <Image 
-                            src="/images/nyomdai_iQC_Kornye_232_IMG_9500 copy.webp" 
+                            src="/images/web_iQC_Kornye_015_MKB_4531 copy.webp" 
                             fill
                             style={{ objectFit: 'cover' }}
                             className="rounded-2xl grayscale"
