@@ -2,6 +2,7 @@ import localFont from 'next/font/local';
 import "./globals.css";
 import MainNav from './components/MainNav';
 import Footer from './components/Footer';
+import ContextProvider from './Context';
 
 export const metadata = {
   title: "IQC Services - Plan it, Make it, Deliver it",
@@ -11,11 +12,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body style={{ fontFamily: 'Syne, sans-serif' }}>
-        <MainNav />
-        {children}
-        <Footer />
-      </body>
+      <ContextProvider>
+        <body style={{ fontFamily: 'Syne, sans-serif' }} className='lg:px-0 px-4'>
+          <MainNav />
+          {children}
+          <Footer />
+        </body>
+      </ContextProvider>
     </html>
   );
 }

@@ -6,13 +6,12 @@
     --blue:#248cbc;
     --white: #fff;
     --grey: #737778;
-    --lightgrey: #ddd
+    --lightgrey: #ddd;
+    --bgwhite: #fafafa;
 }
 
 body {
     background-color: #fafafa;
-    padding-left: 22px;
-    padding-right: 22px;
 }
 
 .font-switzer {
