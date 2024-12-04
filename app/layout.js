@@ -1,13 +1,7 @@
-import localFont from 'next/font/local'
+import localFont from 'next/font/local';
 import "./globals.css";
 import MainNav from './components/MainNav';
 import Footer from './components/Footer';
-
-const switzer = localFont({
-  src: './fonts/Switzer-Variable.woff2',
-  display: 'swap',
-  variable: '--font-switzer'
-})
 
 export const metadata = {
   title: "IQC Services - Plan it, Make it, Deliver it",
@@ -17,8 +11,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${switzer.variable}`}>
-        <MainNav/>
+      <body style={{ fontFamily: 'Syne, sans-serif' }}>
+        <MainNav />
         {children}
         <Footer />
       </body>

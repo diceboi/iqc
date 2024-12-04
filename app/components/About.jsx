@@ -12,7 +12,7 @@ export default function About() {
                     <div className="card lg:border-r border-[#ddd] lg:min-h-[400px] min-h-[200px] card col-span-2 row-span-2 lg:col-span-1 lg:row-span-1">
                         <div className="relative w-full h-full">
                             <Image 
-                                src="/images/assembly-5.webp" 
+                                src="/images/csoportkep.webp" 
                                 fill
                                 style={{ objectFit: 'cover' }}
                                 className="rounded-2xl grayscale"
@@ -23,7 +23,7 @@ export default function About() {
                     <div className="card col-span-2 row-span-2 lg:col-span-1 lg:row-span-1">
                         <div className="relative w-full h-full">
                         <Image 
-                            src="/images/metal-1.webp" 
+                            src="/images/osszeszereles.webp" 
                             fill
                             style={{ objectFit: 'cover' }}
                             className="rounded-2xl grayscale"

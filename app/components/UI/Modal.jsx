@@ -12,7 +12,7 @@ export default function Modal({ isOpen, closeModal }) {
                 </button>
                 <iframe 
                     className='w-full h-full' 
-                    src="https://www.youtube.com/embed/CXtDxO8S_SA?si=P0z8j3ugLeO86jj9" 
+                    src="https://www.youtube.com/embed/E-LHJqcRzto?si=pzQQlVO9SLNkv4BU" 
                     title="IQC Introduction"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowFullScreen

@@ -23,8 +23,8 @@ export default function Footer() {
                     </div>
                     
                     <div className="flex justify-center items-center gap-4 card">
-                        <Image src="/images/iso_9001-150x150.png" width={75} height={75} alt="iso 9001"/>
-                        <Image src="/images/iso_14001-150x150.png" width={75} height={75} alt="iso 14001"/>
+                        <Image src="/images/iso_9001-150x150.png" width={100} height={100} alt="iso 9001"/>
+                        <Image src="/images/iso_14001-150x150.png" width={100} height={100} alt="iso 14001"/>
                     </div>
                 </div>
                 <div className="flex justify-center items-end">

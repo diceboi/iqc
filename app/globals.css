@@ -5,6 +5,8 @@
 :root {
     --blue:#248cbc;
     --white: #fff;
+    --grey: #737778;
+    --lightgrey: #ddd
 }
 
 body {
@@ -150,3 +152,11 @@ p {
     right: 0px;
     z-index: 10;
 }
+
+
+@font-face {
+    font-family: 'Syne';
+    src: url('/fonts/SYNE-VARIABLEFONT_WGHT.TTF') format('truetype');
+    font-weight: 400 900;
+    font-style: normal;
+  }

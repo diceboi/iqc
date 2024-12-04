@@ -17,7 +17,7 @@ export default function Services() {
 
     return(
         <section className="relative container mx-auto border-x border-[#ddd] py-20 cross-bottom-left">            
-            <div className="ruled-grid lg:grid-cols-3 grid-cols-1 grid-rows-2 min-h-[500px] border-b border-[#ddd] cross-top">
+            <div className="ruled-grid lg:grid-cols-4 grid-cols-1 grid-rows-2 min-h-[500px] border-b border-[#ddd] cross-top">
                 <div className="card flex items-start justify-start">
                 <div className="absolute -left-0 lg:top-0 top-0 -translate-y-1/2 w-[30vw] h-[50vh] bg-[--blue] blur-3xl rounded-full opacity-20"></div>
                     <h2 className="lg:text-5xl text-3xl font-switzer font-bold uppercase text-[--blue]">What we do?</h2>
@@ -52,6 +52,38 @@ export default function Services() {
                         <h3 className="absolute right-4 bottom-2 z-10 text-2xl font-switzer font-bold uppercase text-white text-right">Assembly</h3>
                     </div>
                 </div>
+
+                <div className="card">
+
+                    <Lightbox
+                        open={open}
+                        close={() => setOpen(false)}
+                        slides={[
+                        { src: "/images/assembly-1.webp" },
+                        { src: "/images/assembly-2.webp" },
+                        { src: "/images/assembly-3.webp" },
+                        { src: "/images/assembly-4.webp" },
+                        { src: "/images/assembly-5.webp" }
+                        ]}
+                    />
+
+                    <div className="relative bg-[--blue] w-full h-full rounded-2xl overflow-hidden cursor-pointer" onClick={() => setOpen(true)}>
+                        <Image
+                            src="/images/cable-manufacturing-back.webp"
+                            fill
+                            style={{ objectFit: "cover" }}
+                            className=" mix-blend-luminosity rounded-2xl opacity-50"
+                        />
+                        <Image
+                            src="/images/cable-manufacturing-front.webp"
+                            fill
+                            style={{ objectFit: "cover" }}
+                            className="md:mix-blend-luminosity mix-blend-normal hover:mix-blend-normal md:grayscale-0 grayscale hover:grayscale hover:scale-105 rounded-2xl md:opacity-50 opacity-100 hover:opacity-100 transition-all duration-200"
+                        />
+                        <h3 className="absolute right-4 bottom-2 z-10 text-2xl font-switzer font-bold uppercase text-white text-right">Cable manufacturing</h3>
+                    </div>
+                </div>
+
                 <div className="card h-[300px]">
 
                     <Lightbox
@@ -88,72 +120,41 @@ export default function Services() {
                         <h3 className="absolute right-4 bottom-2 z-10 text-2xl font-switzer font-bold uppercase text-white text-right">Metal Working</h3>
                     </div>
                 </div>
+
                 <div className="card">
 
-                    <Lightbox
-                        open={open2}
-                        close={() => setOpen2(false)}
-                        slides={[
-                        { src: "/images/logistics-1.webp" },
-                        { src: "/images/logistics-3.webp" },
-                        { src: "/images/logistics-4.webp" },
-                        { src: "/images/logistics-5.webp" },
-                        { src: "/images/logistics-6.webp" },
-                        { src: "/images/logistics-7.webp" },
-                        { src: "/images/logistics-8.webp" },
-                        ]}
+                <Lightbox
+                    open={open3}
+                    close={() => setOpen3(false)}
+                    slides={[
+                    { src: "/images/engeneering-1.webp" },
+                    { src: "/images/engeneering-2.webp" },
+                    { src: "/images/engeneering-3.webp" },
+                    { src: "/images/engeneering-4.webp" },
+                    { src: "/images/engeneering-5.webp" },
+                    { src: "/images/engeneering-6.webp" },
+                    { src: "/images/engeneering-7.webp" },
+                    ]}
+                />
+
+                <div className="relative bg-[--blue] w-full h-full rounded-2xl overflow-hidden cursor-pointer" onClick={() => setOpen3(true)}>
+                    <Image
+                        src="/images/engeneering-back.webp"
+                        fill
+                        style={{ objectFit: "cover" }}
+                        className=" mix-blend-luminosity rounded-2xl opacity-50"
                     />
-
-                    <div className="relative bg-[--blue] w-full h-full rounded-2xl overflow-hidden cursor-pointer" onClick={() => setOpen2(true)}>
-                        <Image
-                            src="/images/logistics-back.webp"
-                            fill
-                            style={{ objectFit: "cover" }}
-                            className=" mix-blend-luminosity rounded-2xl opacity-50"
-                        />
-                        <Image
-                            src="/images/logistics-front.webp"
-                            fill
-                            style={{ objectFit: "cover" }}
-                            className="md:mix-blend-luminosity mix-blend-normal hover:mix-blend-normal md:grayscale-0 grayscale hover:grayscale hover:scale-105 rounded-2xl md:opacity-50 opacity-100 hover:opacity-100 transition-all duration-200"
-                        />
-                        <h3 className="absolute right-4 bottom-2 z-10 text-2xl font-switzer font-bold uppercase text-white text-right">Logistic Services</h3>
-                    </div>
-                </div>
-                <div className="card">
-
-                    <Lightbox
-                        open={open3}
-                        close={() => setOpen3(false)}
-                        slides={[
-                        { src: "/images/engeneering-1.webp" },
-                        { src: "/images/engeneering-2.webp" },
-                        { src: "/images/engeneering-3.webp" },
-                        { src: "/images/engeneering-4.webp" },
-                        { src: "/images/engeneering-5.webp" },
-                        { src: "/images/engeneering-6.webp" },
-                        { src: "/images/engeneering-7.webp" },
-                        { src: "/images/engeneering-8.webp" },
-                        { src: "/images/engeneering-9.webp" },
-                        ]}
+                    <Image
+                        src="/images/engeneering-front.webp"
+                        fill
+                        style={{ objectFit: "cover" }}
+                        className="md:mix-blend-luminosity mix-blend-normal hover:mix-blend-normal md:grayscale-0 grayscale hover:grayscale hover:scale-105 rounded-2xl md:opacity-50 opacity-100 hover:opacity-100 transition-all duration-200"
                     />
-
-                    <div className="relative bg-[--blue] w-full h-full rounded-2xl overflow-hidden cursor-pointer" onClick={() => setOpen3(true)}>
-                        <Image
-                            src="/images/engeneering-back.webp"
-                            fill
-                            style={{ objectFit: "cover" }}
-                            className=" mix-blend-luminosity rounded-2xl opacity-50"
-                        />
-                        <Image
-                            src="/images/engeneering-front.webp"
-                            fill
-                            style={{ objectFit: "cover" }}
-                            className="md:mix-blend-luminosity mix-blend-normal hover:mix-blend-normal md:grayscale-0 grayscale hover:grayscale hover:scale-105 rounded-2xl md:opacity-50 opacity-100 hover:opacity-100 transition-all duration-200"
-                        />
-                        <h3 className="absolute right-4 bottom-2 z-10 text-2xl font-switzer font-bold uppercase text-white text-right">Engineering services</h3>
-                    </div>
+                    <h3 className="absolute right-4 bottom-2 z-10 text-2xl font-switzer font-bold uppercase text-white text-right">Engineering services</h3>
                 </div>
+                </div>
+
+                
                 <div className="card">
 
                     <Lightbox
@@ -161,7 +162,7 @@ export default function Services() {
                         close={() => setOpen4(false)}
                         slides={[
                         { src: "/images/labor-1.webp" },
-                        { src: "/images/labor-6.webp" },
+                        { src: "/images/labor-2.webp" },
                         { src: "/images/labor-3.webp" },
                         { src: "/images/labor-4.webp" },
                         { src: "/images/labor-5.webp" },
@@ -184,6 +185,74 @@ export default function Services() {
                         <h3 className="absolute right-4 bottom-2 z-10 text-2xl font-switzer font-bold uppercase text-white text-right">Labor Hire</h3>
                     </div>
                 </div>
+
+                <div className="card">
+
+                    <Lightbox
+                        open={open2}
+                        close={() => setOpen2(false)}
+                        slides={[
+                        { src: "/images/logistics-1.webp" },
+                        { src: "/images/logistics-2.webp" },
+                        { src: "/images/logistics-3.webp" },
+                        { src: "/images/logistics-4.webp" },
+                        { src: "/images/logistics-5.webp" },
+                        { src: "/images/logistics-6.webp" },
+                        { src: "/images/logistics-7.webp" },
+                        ]}
+                    />
+
+                    <div className="relative bg-[--blue] w-full h-full rounded-2xl overflow-hidden cursor-pointer" onClick={() => setOpen2(true)}>
+                        <Image
+                            src="/images/logistics-back.webp"
+                            fill
+                            style={{ objectFit: "cover" }}
+                            className=" mix-blend-luminosity rounded-2xl opacity-50"
+                        />
+                        <Image
+                            src="/images/logistics-front.webp"
+                            fill
+                            style={{ objectFit: "cover" }}
+                            className="md:mix-blend-luminosity mix-blend-normal hover:mix-blend-normal md:grayscale-0 grayscale hover:grayscale hover:scale-105 rounded-2xl md:opacity-50 opacity-100 hover:opacity-100 transition-all duration-200"
+                        />
+                        <h3 className="absolute right-4 bottom-2 z-10 text-2xl font-switzer font-bold uppercase text-white text-right">Signage</h3>
+                    </div>
+                </div>
+
+                <div className="card">
+
+                    <Lightbox
+                        open={open2}
+                        close={() => setOpen2(false)}
+                        slides={[
+                        { src: "/images/logistics-1.webp" },
+                        { src: "/images/logistics-2.webp" },
+                        { src: "/images/logistics-3.webp" },
+                        { src: "/images/logistics-4.webp" },
+                        { src: "/images/logistics-5.webp" },
+                        { src: "/images/logistics-6.webp" },
+                        { src: "/images/logistics-7.webp" },
+                        ]}
+                    />
+
+                    <div className="relative bg-[--blue] w-full h-full rounded-2xl overflow-hidden cursor-pointer" onClick={() => setOpen2(true)}>
+                        <Image
+                            src="/images/container-front.webp"
+                            fill
+                            style={{ objectFit: "cover" }}
+                            className=" mix-blend-luminosity rounded-2xl opacity-50"
+                        />
+                        <Image
+                            src="/images/container-front.webp"
+                            fill
+                            style={{ objectFit: "cover" }}
+                            className="md:mix-blend-luminosity mix-blend-normal hover:mix-blend-normal md:grayscale-0 grayscale hover:grayscale hover:scale-105 rounded-2xl md:opacity-50 opacity-100 hover:opacity-100 transition-all duration-200"
+                        />
+                        <h3 className="absolute right-4 bottom-2 z-10 text-2xl font-switzer font-bold uppercase text-white text-right">Mobile container</h3>
+                    </div>
+                </div>
+                
+                
             </div>
         </section>
     )

@@ -20,7 +20,7 @@ export default function Why() {
                     <div className="card lg:border-r border-[#ddd] lg:min-h-[400px] min-h-[200px] card col-span-2 row-span-2 lg:col-span-1 lg:row-span-1">
                         <div className="relative w-full h-full">
                             <Image 
-                                src="/images/web_iQC_Kornye_218_MKB_5262 copy.webp" 
+                                src="/images/assembly-3.webp" 
                                 fill
                                 style={{ objectFit: 'cover' }}
                                 className="rounded-2xl grayscale"
@@ -31,7 +31,7 @@ export default function Why() {
                     <div className="card col-span-2 row-span-2 lg:col-span-1 lg:row-span-1">
                         <div className="relative w-full h-full">
                         <Image 
-                            src="/images/web_iQC_Kornye_015_MKB_4531 copy.webp" 
+                            src="/images/motherboard.webp" 
                             fill
                             style={{ objectFit: 'cover' }}
                             className="rounded-2xl grayscale"

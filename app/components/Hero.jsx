@@ -35,30 +35,30 @@ export default function Hero() {
         <div className='absolute container m-auto flex flex-col justify-center items-center lg:h-[50vh] h-[60vh]'>
           <div className="flex flex-col gap-5 justify-center items-center font-switzer">
             <div className="flex md:flex-row flex-col md:gap-4 gap-0">
-              <h1 className='lg:text-7xl text-5xl font-bold text-black uppercase font-switzer'>build</h1>
-              <h1 className='lg:text-7xl text-5xl font-bold text-black uppercase font-switzer'>something</h1>
+              <h1 className='lg:text-7xl text-5xl font-bold text-bold uppercase font-switzer'>build</h1>
+              <h1 className='lg:text-7xl text-5xl font-bold text-bold uppercase font-switzer'>something</h1>
             </div>      
             <div className="flex md:flex-row flex-col md:gap-8 gap-2 -mt-7 uppercase">
-              <div className="flex flex-col gap-0 overflow-hidden lg:h-20 md:h-12 h-12 text-[--blue] md:text-right text-left font-xl font-black">
+              <div className="flex flex-col gap-0 overflow-hidden lg:h-20 md:h-12 h-12 text-[--blue] md:text-right text-left font-xl font-bold">
 
                 <motion.div 
                   animate = {{y: [12,12,-60,-60,-132,-132,-204,-204,-276,-276,12,12]}}
                   transition={{ duration: 10, repeat: Infinity }}
                   className="-mt-[10px] lg:block hidden"
                 >
-                <h1 className="text-7xl font-black text-[--blue] uppercase font-switzer">
+                <h1 className="text-7xl font-bold text-[--blue] uppercase font-switzer">
                   magical
                 </h1>
-                <h1 className="text-7xl font-black text-[--blue] uppercase font-switzer">
-                  fun
+                <h1 className="text-7xl font-bold text-[--blue] uppercase font-switzer">
+                  Technical
                 </h1>
-                <h1 className="text-7xl font-black text-[--blue] uppercase font-switzer">
+                <h1 className="text-7xl font-bold text-[--blue] uppercase font-switzer">
                   special
                 </h1>
-                <h1 className="text-7xl font-black text-[--blue] uppercase font-switzer">
+                <h1 className="text-7xl font-bold text-[--blue] uppercase font-switzer">
                   metal
                 </h1>
-                <h1 className="text-7xl font-black text-[--blue] uppercase font-switzer">
+                <h1 className="text-7xl font-bold text-[--blue] uppercase font-switzer">
                   innovative
                 </h1>
                 </motion.div>
@@ -68,25 +68,25 @@ export default function Hero() {
                   transition={{ duration: 10, repeat: Infinity }}
                   className="md:-mt-[5px] -mt-[5px]"
                 >
-                <h1 className="text-5xl font-black text-[--blue] uppercase font-switzer">
+                <h1 className="text-5xl font-bold text-[--blue] uppercase font-switzer">
                   magical
                 </h1>
-                <h1 className="text-5xl font-black text-[--blue] uppercase font-switzer">
+                <h1 className="text-5xl font-bold text-[--blue] uppercase font-switzer">
                   fun
                 </h1>
-                <h1 className="text-5xl font-black text-[--blue] uppercase font-switzer">
+                <h1 className="text-5xl font-bold text-[--blue] uppercase font-switzer">
                   special
                 </h1>
-                <h1 className="text-5xl font-black text-[--blue] uppercase font-switzer">
+                <h1 className="text-5xl font-bold text-[--blue] uppercase font-switzer">
                   metal
                 </h1>
-                <h1 className="text-5xl font-black text-[--blue] uppercase font-switzer">
+                <h1 className="text-5xl font-bold text-[--blue] uppercase font-switzer">
                   innovative
                 </h1>
                 </motion.div>
 
               </div>
-              <h1 className="lg:text-7xl text-5xl font-bold text-black uppercase font-switzer">together</h1>
+              <h1 className="lg:text-7xl text-5xl font-bold text-bold uppercase font-switzer">together</h1>
             </div>
             <div className="flex lg:flex-row flex-col gap-4 items-center justtify-center pt-10">
               <Modal isOpen={isModalOpen} closeModal={closeModal} />
