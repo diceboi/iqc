@@ -63,7 +63,7 @@ export default function MainNav() {
           </h3>
         </div>
         <div
-            className="z-50 block xl:hidden cursor-pointer"
+            className="block xl:hidden cursor-pointer z-50"
             onClick={(event) => {
                 event.stopPropagation(); // Prevent the click from propagating
                 toggleMobileMenu(); // Toggle the menu

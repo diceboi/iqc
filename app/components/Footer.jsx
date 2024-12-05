@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Footer() {
     return(
         <section className=" flex container mx-auto py-10">
-            <div className="relative bg-gradient-to-br from-[--blue] to-[#77c6eb] h-[30vh] w-full cross-top-right">
+            <div className="relative bg-gradient-to-br from-[--blue] to-[#77c6eb] min-h-[30vh] w-full cross-top-right">
                 <div className="ruled-grid lg:grid-cols-2 h-full" >
                     <div className="flex flex-col justify-center items-center gap-4 card text-white">
                         <h3 className="font-bold font-switzer uppercase text-2xl">Contact Us</h3>
