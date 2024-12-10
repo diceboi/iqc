@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <ContextProvider>
-        <body style={{ fontFamily: 'Syne, sans-serif' }} className='lg:px-0 px-4'>
+        <body style={{ fontFamily: 'Syne, sans-serif' }} className='lg:px-4 px-4'>
           <MainNav />
           {children}
           <Footer />

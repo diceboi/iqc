@@ -31,14 +31,13 @@ export default function MainNav() {
         setMobileMenuClose(); // Close the menu
       }
     };
-  
+
     document.addEventListener("mousedown", handleOutsideClick);
-  
+
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, [setMobileMenuClose]);
-  
 
   const mobileNavVariants = {
     hidden: { x: "-100%", opacity: 0 },
@@ -63,18 +62,25 @@ export default function MainNav() {
           </h3>
         </div>
         <div
-            className="block xl:hidden cursor-pointer z-50"
-            onClick={(event) => {
-                event.stopPropagation(); // Prevent the click from propagating
-                toggleMobileMenu(); // Toggle the menu
-            }}
-            >
-            <CiMenuBurger className={`min-w-6 min-h-6 ${isMobileMenuOpen ? 'hidden' : 'block'}`} />
-            <TfiClose className={`min-w-6 min-h-6 ${isMobileMenuOpen ? 'block' : 'hidden'}`} />
+          className="block xl:hidden cursor-pointer z-50"
+          onClick={(event) => {
+            event.stopPropagation(); // Prevent the click from propagating
+            toggleMobileMenu(); // Toggle the menu
+          }}
+        >
+          <CiMenuBurger
+            className={`min-w-6 min-h-6 ${
+              isMobileMenuOpen ? "hidden" : "block"
+            }`}
+          />
+          <TfiClose
+            className={`min-w-6 min-h-6 ${
+              isMobileMenuOpen ? "block" : "hidden"
+            }`}
+          />
         </div>
 
-
-        <ul className="xl:flex hidden gap-8 text-[--grey] font-bold justify-between h-full min-w-fit">
+        <ul className="xl:flex  hidden gap-6 text-[--grey] font-bold justify-between h-full min-w-fit text-sm">
           <li className="min-w-fit text-center hover:text-[--blue] hover:underline cursor-pointer">
             Assembly
           </li>
