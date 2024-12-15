@@ -1,7 +1,7 @@
 "use client";
 
 import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
+import { Suspense, useState  } from "react";
 import {
   Html,
   OrbitControls,
@@ -19,13 +19,14 @@ function Loader() {
   return <Html center>{progress.toFixed(1)}%</Html>;
 }
 
-export default function ConfiguratorInner() {
+export default function ConfiguratorInner({ chairColor, interiorColor, containerColor }) {
+
   return (
     <Canvas
       shadows
       gl={{ antialias: true, toneMappingExposure: 1 }}
       dpr={[1, 2]}
-      className="bg-white border border-[--lightgrey]"
+      className="bg-white border border-[--lightgrey] w-full h-full"
       camera={{
         position: [6, 5, 5],
         fov: 50,
@@ -78,7 +79,7 @@ export default function ConfiguratorInner() {
 
       {/* Model */}
       <Suspense fallback={<Loader />}>
-        <Model />
+      <Model chairColor={chairColor} interiorColor={interiorColor} containerColor={containerColor}/>
       </Suspense>
 
       {/* Orbit Controls */}
