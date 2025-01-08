@@ -56,27 +56,6 @@ export default function ConfiguratorInner({ chairColor, interiorColor, container
         <Bloom intensity={.5} luminanceThreshold={0.1} luminanceSmoothing={20} />
       </EffectComposer>
 
-      {/* Shadows */}
-      <AccumulativeShadows
-        temporal
-        frames={50}
-        alphaTest={4}
-        color="green"
-        colorBlend={10}
-        toneMapped
-        position={[0, 0, 0]}
-        scale={30}
-      >
-        <RandomizedLight
-          amount={8} // Number of lights
-          radius={50} // Spread of lights
-          intensity={1} // Light intensity
-          ambient={0.5} // Ambient light contribution
-          position={[5, 5, -10]}
-          bias={0.001}
-        />
-      </AccumulativeShadows>
-
       {/* Model */}
       <Suspense fallback={<Loader />}>
       <Model chairColor={chairColor} interiorColor={interiorColor} containerColor={containerColor}/>

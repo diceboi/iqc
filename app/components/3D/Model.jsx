@@ -34,4 +34,4 @@ export default function Model({ chairColor, interiorColor, containerColor }) {
   return <primitive object={scene} ref={group} dispose={null} />;
 }
 
-useGLTF.preload("/3D/lelato-20ft.gltf");
+

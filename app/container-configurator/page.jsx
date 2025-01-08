@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic"
 import { useState } from "react";
 import { PiMouseLeftClickFill, PiMouseRightClickFill, PiMouseMiddleClickFill } from "react-icons/pi";
+import ColorPicker from 'react-pick-color';
 
 const ConfiguratorInner = dynamic(() => import('../components/ConfiguratorInner'), { ssr: true })
 
@@ -19,8 +20,20 @@ export default function ConfiguratorPage() {
   return (
     <div className="container m-auto h-[80vh]">
       <div className="relative w-full h-full">
-        <div id="configurator-ui" className="absolute bottom-0 left-0 flex lg:flex-row flex-col lg:gap-8 gap-4 items-start p-2 z-10 bg-white m-2 bg-opacity-75 backdrop-blur-md">
+        <div id="configurator-ui" className="absolute bottom-0 left-0 flex lg:flex-row flex-col lg:gap-8 gap-4 items-start p-2 z-10 bg-white m-2 bg-opacity-75 backdrop-blur-md rounded-sm">
           {/* Color Pickers */}
+
+          {/*<ColorPicker 
+          color={chairColor} 
+          theme={{
+            background: 'lightgrey',
+            inputBackground: 'grey',
+            borderColor: 'darkgrey',
+            borderRadius: '8px',
+            color: 'black',
+            width: '320px'
+          }}
+          onChange={chairColor => setChairColor(chairColor.hex)} />*/}
 
           <div className="flex flex-nowrap items-center justify-center gap-2">
             <label className="flex flex-nowrap items-center gap-2 lg:text-sm text-xs">
@@ -52,6 +65,16 @@ export default function ConfiguratorPage() {
                 value={containerColor}
                 onChange={(e) => setContainerColor(e.target.value)}
               />
+            </label>
+          </div>
+
+          <div className="flex flex-nowrap items-center justify-center gap-2">
+            <label className="flex flex-nowrap items-center gap-2 lg:text-sm text-xs">
+              Trial RAL:{" "}
+              <button
+                onClick={(e) => setContainerColor("#af1d26")}
+                className="bg-[#af1d26] text-white px-2 py-1 rounded-md"
+              >RAL 3003</button>
             </label>
           </div>
 
