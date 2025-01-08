@@ -7,11 +7,13 @@ export const Context = createContext({
   toggleMobileMenu: () => {},
   setMobileMenuOpen: () => {},
   setMobileMenuClose: () => {},
+  model: '',
+  setModel: () => {},
 });
 
 export default function ContextProvider({ children }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  const [model, setModel] = useState('lelato-20ft');
   /* Mobile menu */
   const toggleMobileMenu = () => setIsMobileMenuOpen((prev) => !prev);
 
@@ -24,6 +26,8 @@ export default function ContextProvider({ children }) {
       toggleMobileMenu,
       setMobileMenuOpen,
       setMobileMenuClose,
+      model,
+      setModel,
     }}>
       {children}
     </Context.Provider>

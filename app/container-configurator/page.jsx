@@ -1,13 +1,18 @@
 "use client"
 
 import dynamic from "next/dynamic"
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { useRouter } from "next/navigation";
+import { Context } from "../Context";
 import { PiMouseLeftClickFill, PiMouseRightClickFill, PiMouseMiddleClickFill } from "react-icons/pi";
 import ColorPicker from 'react-pick-color';
 
 const ConfiguratorInner = dynamic(() => import('../components/ConfiguratorInner'), { ssr: true })
 
 export default function ConfiguratorPage() {
+
+  const { model, setModel } = useContext(Context);
+  const router = useRouter();
 
   const [chairColor, setChairColor] = useState("#83BBFF");
   const [interiorColor, setInteriorColor] = useState("#E6EAF7");
@@ -16,6 +21,10 @@ export default function ConfiguratorPage() {
   console.log("Chair Color:", chairColor);
   console.log("Interior Color:", interiorColor);
   console.log("Container Color:", containerColor);
+
+  const handleModelChange = (e) => {
+    setModel(e.target.value);
+  };
 
   return (
     <div className="container m-auto h-[80vh]">
@@ -93,6 +102,16 @@ export default function ConfiguratorPage() {
             <PiMouseMiddleClickFill className="min-w-6 min-h-6 text-[--blue]"/>
             <p className="lg:text-sm text-xs">Zooming</p>
           </div>
+        </div>
+
+        <div id="model-selector" className="absolute top-0 right-0 flex lg:flex-row items-center gap-4 z-10 p-4">
+          <p className="lg:text-sm text-xs">Select model:</p>
+          <select onChange={handleModelChange} value={model} className="border border-[--lightgrey] rounded-md p-2">
+            <option value="lelato-20ft">Grandstand 20ft</option>
+            <option value="kispad-20ft">Bench 20ft</option>
+            <option value="lelato-40ft-1">Grandstand 40ft v1</option>
+            <option value="lelato-40ft-2">Grandstand 40ft v2</option>
+          </select>
         </div>
         
         <ConfiguratorInner chairColor={chairColor} interiorColor={interiorColor} containerColor={containerColor}/>

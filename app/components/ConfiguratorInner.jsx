@@ -1,7 +1,8 @@
 "use client";
 
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useState  } from "react";
+import { Suspense, useState, useContext  } from "react";
+import { Context } from "../Context";
 import {
   Html,
   OrbitControls,
@@ -10,7 +11,10 @@ import {
   AccumulativeShadows,
   RandomizedLight,
 } from "@react-three/drei";
-import Model from "./3D/Model";
+import Lelato20ft from "./3D/Lelato20ft";
+import Kispad20ft from "./3D/Kispad20ft";
+import Lelato40ft1 from "./3D/Lelato40ft1";
+import Lelato40ft2 from "./3D/Lelato40ft2";
 import { useProgress } from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 
@@ -20,6 +24,8 @@ function Loader() {
 }
 
 export default function ConfiguratorInner({ chairColor, interiorColor, containerColor }) {
+
+  const { model, setModel } = useContext(Context);
 
   return (
     <Canvas
@@ -58,7 +64,18 @@ export default function ConfiguratorInner({ chairColor, interiorColor, container
 
       {/* Model */}
       <Suspense fallback={<Loader />}>
-      <Model chairColor={chairColor} interiorColor={interiorColor} containerColor={containerColor}/>
+      {model === "lelato-20ft" && 
+      <Lelato20ft chairColor={chairColor} interiorColor={interiorColor} containerColor={containerColor}/>
+      }
+      {model === "kispad-20ft" && 
+      <Kispad20ft chairColor={chairColor} interiorColor={interiorColor} containerColor={containerColor}/>
+      }
+      {model === "lelato-40ft-1" && 
+      <Lelato40ft1 chairColor={chairColor} interiorColor={interiorColor} containerColor={containerColor}/>
+      }
+      {model === "lelato-40ft-2" && 
+      <Lelato40ft2 chairColor={chairColor} interiorColor={interiorColor} containerColor={containerColor}/>
+      }
       </Suspense>
 
       {/* Orbit Controls */}
