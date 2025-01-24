@@ -29,7 +29,7 @@ export default function ConfiguratorPage() {
   return (
     <div className="container m-auto h-[80vh]">
       <div className="relative w-full h-full">
-        <div id="configurator-ui" className="absolute bottom-0 left-0 flex lg:flex-row flex-col lg:gap-8 gap-4 items-start p-2 z-10 bg-white m-2 bg-opacity-75 backdrop-blur-md rounded-sm">
+        <div id="configurator-ui" className="absolute bottom-0 left-0 flex lg:flex-row flex-col lg:gap-8 gap-4 items-center p-2 z-10 bg-white m-2 bg-opacity-75 backdrop-blur-md rounded-sm">
           {/* Color Pickers */}
 
           {/*<ColorPicker 
@@ -44,7 +44,24 @@ export default function ConfiguratorPage() {
           }}
           onChange={chairColor => setChairColor(chairColor.hex)} />*/}
 
-          <div className="flex flex-nowrap items-center justify-center gap-2">
+          <h4>Színválaszték:</h4>
+
+          <button className="flex flex-nowrap w-16 h-8 rounded-sm border focus:border-4 focus:border-[--blue]" onClick={(e) => (setContainerColor("#5f5f5f"), setChairColor("#1e1e1e"), setInteriorColor('#1e1e1e'))}>
+            <div className="w-1/2 h-full bg-[#5f5f5f]"></div>
+            <div className="w-1/2 h-full bg-[#1e1e1e]"></div>
+          </button>
+
+          <button className="flex flex-nowrap w-16 h-8 rounded-sm border focus:border-4 focus:border-[--blue]" onClick={(e) => (setContainerColor("#5f5f5f"), setChairColor("#83BBFF"), setInteriorColor('#83BBFF'))}>
+            <div className="w-1/2 h-full bg-[#5f5f5f]"></div>
+            <div className="w-1/2 h-full bg-[#83BBFF]"></div>
+          </button>
+
+          <button className="flex flex-nowrap w-16 h-8 rounded-sm border focus:border-4 focus:border-[--blue]" onClick={(e) => (setContainerColor("#5f5f5f"), setChairColor("#ffffff"), setInteriorColor('#ffffff'))}>
+            <div className="w-1/2 h-full bg-[#5f5f5f]"></div>
+            <div className="w-1/2 h-full bg-[#ffffff]"></div>
+          </button>
+
+          {/*<div className="flex flex-nowrap items-center justify-center gap-2">
             <label className="flex flex-nowrap items-center gap-2 lg:text-sm text-xs">
               Chair Color:{" "}
               <input
@@ -85,7 +102,7 @@ export default function ConfiguratorPage() {
                 className="bg-[#af1d26] text-white px-2 py-1 rounded-md"
               >RAL 3003</button>
             </label>
-          </div>
+          </div>*/}
 
         </div>
 
