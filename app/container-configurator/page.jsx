@@ -30,79 +30,60 @@ export default function ConfiguratorPage() {
     <div className="container m-auto h-[80vh]">
       <div className="relative w-full h-full">
         <div id="configurator-ui" className="absolute bottom-0 left-0 flex lg:flex-row flex-col lg:gap-8 gap-4 items-center p-2 z-10 bg-white m-2 bg-opacity-75 backdrop-blur-md rounded-sm">
-          {/* Color Pickers */}
 
-          {/*<ColorPicker 
-          color={chairColor} 
-          theme={{
-            background: 'lightgrey',
-            inputBackground: 'grey',
-            borderColor: 'darkgrey',
-            borderRadius: '8px',
-            color: 'black',
-            width: '320px'
-          }}
-          onChange={chairColor => setChairColor(chairColor.hex)} />*/}
+          <div className="flex flex-col gap-2">
+          <h4>Chair Color:</h4>
 
-          <h4>Színválaszték:</h4>
-
-          <button className="flex flex-nowrap w-16 h-8 rounded-sm border focus:border-4 focus:border-[--blue]" onClick={(e) => (setContainerColor("#5f5f5f"), setChairColor("#1e1e1e"), setInteriorColor('#1e1e1e'))}>
-            <div className="w-1/2 h-full bg-[#5f5f5f]"></div>
-            <div className="w-1/2 h-full bg-[#1e1e1e]"></div>
-          </button>
-
-          <button className="flex flex-nowrap w-16 h-8 rounded-sm border focus:border-4 focus:border-[--blue]" onClick={(e) => (setContainerColor("#5f5f5f"), setChairColor("#83BBFF"), setInteriorColor('#83BBFF'))}>
-            <div className="w-1/2 h-full bg-[#5f5f5f]"></div>
-            <div className="w-1/2 h-full bg-[#83BBFF]"></div>
-          </button>
-
-          <button className="flex flex-nowrap w-16 h-8 rounded-sm border focus:border-4 focus:border-[--blue]" onClick={(e) => (setContainerColor("#5f5f5f"), setChairColor("#ffffff"), setInteriorColor('#ffffff'))}>
-            <div className="w-1/2 h-full bg-[#5f5f5f]"></div>
-            <div className="w-1/2 h-full bg-[#ffffff]"></div>
-          </button>
-
-          {/*<div className="flex flex-nowrap items-center justify-center gap-2">
-            <label className="flex flex-nowrap items-center gap-2 lg:text-sm text-xs">
-              Chair Color:{" "}
-              <input
-                type="color"
-                value={chairColor}
-                onChange={(e) => setChairColor(e.target.value)}
-              />
-            </label>
+          <div className="grid grid-cols-6">
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#5f5f5f]" onClick={(e) => (setChairColor("#5f5f5f"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#2e2e2e]" onClick={(e) => (setChairColor("#2e2e2e"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#2cc5dc]" onClick={(e) => (setChairColor("#2cc5dc"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#1f2986]" onClick={(e) => (setChairColor("#1f2986"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#e4e4e4]" onClick={(e) => (setChairColor("#e4e4e4"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#000]" onClick={(e) => (setChairColor("#000"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#85f07a]" onClick={(e) => (setChairColor("#85f07a"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#308527]" onClick={(e) => (setChairColor("#308527"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#d42e2e]" onClick={(e) => (setChairColor("#d42e2e"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#efe230]" onClick={(e) => (setChairColor("#efe230"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#895d1e]" onClick={(e) => (setChairColor("#895d1e"))}></button>
+          </div>
           </div>
 
-          <div className="flex flex-nowrap items-center justify-center gap-2">
-            <label className="flex flex-nowrap items-center gap-2 lg:text-sm text-xs">
-              Interior Color:{" "}
-              <input
-                type="color"
-                value={interiorColor}
-                onChange={(e) => setInteriorColor(e.target.value)}
-              />
-            </label>
+          <div className="flex flex-col gap-2">
+          <h4>Interior Color:</h4>
+
+          <div className="grid grid-cols-6">
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#5f5f5f]" onClick={(e) => (setInteriorColor("#5f5f5f"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#2e2e2e]" onClick={(e) => (setInteriorColor("#2e2e2e"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#2cc5dc]" onClick={(e) => (setInteriorColor("#2cc5dc"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#1f2986]" onClick={(e) => (setInteriorColor("#1f2986"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#e4e4e4]" onClick={(e) => (setInteriorColor("#e4e4e4"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#000]" onClick={(e) => (setInteriorColor("#000"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#85f07a]" onClick={(e) => (setInteriorColor("#85f07a"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#308527]" onClick={(e) => (setInteriorColor("#308527"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#d42e2e]" onClick={(e) => (setInteriorColor("#d42e2e"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#efe230]" onClick={(e) => (setInteriorColor("#efe230"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#895d1e]" onClick={(e) => (setInteriorColor("#895d1e"))}></button>
+          </div>
           </div>
 
-          <div className="flex flex-nowrap items-center justify-center gap-2">
-            <label className="flex flex-nowrap items-center gap-2 lg:text-sm text-xs">
-              Container Color:{" "}
-              <input
-                type="color"
-                value={containerColor}
-                onChange={(e) => setContainerColor(e.target.value)}
-              />
-            </label>
-          </div>
+          <div className="flex flex-col gap-2">
+          <h4>Exterior Color:</h4>
 
-          <div className="flex flex-nowrap items-center justify-center gap-2">
-            <label className="flex flex-nowrap items-center gap-2 lg:text-sm text-xs">
-              Trial RAL:{" "}
-              <button
-                onClick={(e) => setContainerColor("#af1d26")}
-                className="bg-[#af1d26] text-white px-2 py-1 rounded-md"
-              >RAL 3003</button>
-            </label>
-          </div>*/}
+          <div className="grid grid-cols-6">
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#5f5f5f]" onClick={(e) => (setContainerColor("#5f5f5f"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#2e2e2e]" onClick={(e) => (setContainerColor("#2e2e2e"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#2cc5dc]" onClick={(e) => (setContainerColor("#2cc5dc"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#1f2986]" onClick={(e) => (setContainerColor("#1f2986"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#e4e4e4]" onClick={(e) => (setContainerColor("#e4e4e4"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#000]" onClick={(e) => (setContainerColor("#000"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#85f07a]" onClick={(e) => (setContainerColor("#85f07a"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#308527]" onClick={(e) => (setContainerColor("#308527"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#d42e2e]" onClick={(e) => (setContainerColor("#d42e2e"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#efe230]" onClick={(e) => (setContainerColor("#efe230"))}></button>
+            <button className="flex flex-nowrap w-8 h-8 rounded-sm border focus:border-4 focus:border-[--blue] bg-[#895d1e]" onClick={(e) => (setContainerColor("#895d1e"))}></button>
+          </div>
+          </div>
 
         </div>
 
