@@ -188,6 +188,7 @@ export default function MainNav() {
                   text={"3D Configurator"}
                   icon={""}
                   link={"/container-configurator"}
+                  onclick={() => togglePopup()}
                   classname={'self-center w-fit'}
                 />
                 <MainButton
