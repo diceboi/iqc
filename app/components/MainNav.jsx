@@ -72,7 +72,7 @@ export default function MainNav() {
               <h2 className="text-[--blue] font-bold text-2xl">Assembly</h2>
               <p>We offer mechanical and sub-assembly production, with flexibility, quality and traceability. In the process, we work closely with our customer to explore the usage conditions, standard specifications, environment, compatibility of electronics, safety and sustainability aspects.</p>
               <MainButton
-                text={"Galéria"}
+                text={"Gallery"}
                 icon={""}
                 link={""}
                 classname={'self-center w-fit'}
@@ -96,7 +96,7 @@ export default function MainNav() {
               <h2 className="text-[--blue] font-bold text-2xl">Cable manufacturing</h2>
               <p>Our company offers manual and mechanical cutting, blanking, crimping of cables and wires, shrink tubing of cable ends. We are able to label shrink tubes. Our processing range consists from 0.14mm to 10mm. We use individual packaging, sets or sizes according to the needs of our customers.</p>
               <MainButton
-                text={"Galéria"}
+                text={"Gallery"}
                 icon={""}
                 link={""}
                 classname={'self-center w-fit'}
@@ -120,7 +120,7 @@ export default function MainNav() {
               <h2 className="text-[--blue] font-bold text-2xl">Metal working</h2>
               <p>We offer a wide range of sheet and profile processing services, such as CNC punching and bending, laser cutting, hand and robot welding. We are also able to offer surface treatment solutions: anodizing and powder coating</p>
               <MainButton
-                text={"Galéria"}
+                text={"Gallery"}
                 icon={""}
                 link={""}
                 classname={'self-center w-fit'}
@@ -157,7 +157,7 @@ export default function MainNav() {
               <p><b>WALL DISPLAY</b> - Our digital signage monitors can be operated 24/7. They are available in both standard and interactive/touch screen versions. The brightness of our displays is much higher than conventional television sets. They can be used mounted on the wall in horizontal and vertical versions, as part of an information column or kiosk, or &quot;boxed&quot; for safety reasons. We also offer vandal-proof and smart solutions for outdoor use behind weatherproof, safety tempered glass.</p>
               <p><b>KIOSK </b> - With the help of the digital kiosk or information desk, your customers can easily get information about your products and services. Our easy-to-transport, durable, thin, steel-built kiosks are recommended for exhibitions and stores where easy display portability is important. If required, it can be supplemented with a printer, camera, bar code, QR code reader.</p>
               <MainButton
-                text={"Galéria"}
+                text={"Gallery"}
                 icon={""}
                 link={""}
                 classname={'self-center w-fit'}
@@ -179,9 +179,6 @@ export default function MainNav() {
           {form === "mobilecontainer" && (
             <div className="space-y-8">
               <h2 className="text-[--blue] font-bold text-2xl">Mobile container</h2>
-              <p>Az <b>iQC Services Kft.</b> kifejlesztett egy modern és könnyen kialakítható fedett lelátót, amelyet 40 lábas konténer átalakításával lehet megvalósítani. A lelátót kétféle kivitelben készítjük, 53 fős, amely önállóan egyenként, vagy több darab elhelyezésével is használható, illetve a 60 fős, amely sorolható, közvetlenül egymás mellé tehető. A lelátók nagy szilárdságú acélból készülnek, ami hosszú élettartamot biztosít.</p>
-              <p>A lelátók sportklubok és a nézők számára kényelmes és fedett ülőhelyeket kínálnak kiváló kilátással a játéktérre. Az iQC Services Kft. moduláris lelátórendszere a legjobb megoldás (fedett) lelátók megvalósítására a rövid kivitelezési idő miatt.</p>
-              <p>Az iQC Services Kft./cégünk a lelátót megvásárlásra vagy bérletre is kínálja. A hosszú távú bérleti szerződés, vásárlási opcióval csökkenti a kezdeti beruházási költségeket és a sportklubnak azonnal megoldást nyújt saját lelátó biztosítására.</p>
               <p>We developed a modern and easy-to-design covered grandstand that can be produced by converting a 40-foot container. The stand is made in two versions, 53-person stands, which can be used individually or by placing several stands, and 60-person stands, which can be lined up and placed directly next to each other. The stands are made of high-strength steel, which provides  a long service life. The stands offer sports clubs and spectators comfortable and covered seats with an excellent view of the playing field. Our modular stand system is the best solution for implementing (covered) stands due to the short construction time. We also offer long-term lease services with purchase option, reducing the initial investment cost.</p>
               <div className="flex flex-nowrap items-center gap-4">
                 <MainButton
@@ -199,6 +196,24 @@ export default function MainNav() {
                 />
               </div>
             </div>
+          )}
+
+
+          {form === "cert" && (
+              
+              <div className="space-y-8">
+                <Image
+                  src="/certification1.png"
+                  width={1920}
+                  height={1080}
+                  alt="certification1" />
+                  <Image
+                  src="/certification2.png"
+                  width={1920}
+                  height={1080}
+                  alt="certification2" />
+              </div>
+            
           )}
 
 

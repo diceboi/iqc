@@ -3,19 +3,23 @@
 import Image from "next/image"
 
 import * as React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { Context } from "../Context";
 import { Lightbox } from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
 export default function Services() {
 
-    const [open, setOpen] = useState(false);
-    const [open1, setOpen1] = useState(false);
-    const [open2, setOpen2] = useState(false);
-    const [open3, setOpen3] = useState(false);
-    const [open4, setOpen4] = useState(false);
-    const [open5, setOpen5] = useState(false);
-    const [open6, setOpen6] = useState(false);
+    const {
+        isMobileMenuOpen,
+        toggleMobileMenu,
+        setMobileMenuClose,
+        setMobileMenuOpen,
+        openPopup,
+        togglePopup,
+        form,
+        setForm
+      } = useContext(Context);
 
     return(
         <section className="relative container mx-auto border-x border-[#ddd] py-20 cross-bottom-left">            
@@ -25,19 +29,7 @@ export default function Services() {
                     <h2 className="lg:text-5xl text-3xl font-switzer font-bold uppercase text-[--blue]">What we do?</h2>
                 </div>
                 <div className="card">
-
-                    <Lightbox
-                        open={open}
-                        close={() => setOpen(false)}
-                        slides={[
-                        { src: "/images/assembly-2.webp" },
-                        { src: "/images/assembly-3.webp" },
-                        { src: "/images/assembly-4.webp" },
-                        { src: "/images/assembly-5.webp" }
-                        ]}
-                    />
-
-                    <div className="relative bg-[--blue] w-full h-full rounded-2xl overflow-hidden cursor-pointer" onClick={() => setOpen(true)}>
+                    <div className="relative bg-[--blue] w-full h-full rounded-2xl overflow-hidden cursor-pointer"  onClick={() => {setForm("assembly"), togglePopup("assembly");}}>
                         <Image
                             src="/images/assembly-back.webp"
                             fill
@@ -55,19 +47,7 @@ export default function Services() {
                 </div>
 
                 <div className="card">
-
-                    <Lightbox
-                        open={open1}
-                        close={() => setOpen1(false)}
-                        slides={[
-                        { src: "/images/web_iQC_Kornye_146_MKB_5010 copy.webp" },
-                        { src: "/images/assembly-1.webp" },
-                        { src: "/images/cable-manufacturing-1.webp" },
-                        { src: "/images/cable-manufacturing-2.webp" },
-                        ]}
-                    />
-
-                    <div className="relative bg-[--blue] w-full h-full rounded-2xl overflow-hidden cursor-pointer" onClick={() => setOpen1(true)}>
+                    <div className="relative bg-[--blue] w-full h-full rounded-2xl overflow-hidden cursor-pointer"  onClick={() => {setForm("cablemanufacturing"), togglePopup("cablemanufacturing");}}>
                         <Image
                             src="/images/cable-manufacturing-back.webp"
                             fill
@@ -85,26 +65,7 @@ export default function Services() {
                 </div>
 
                 <div className="card h-[300px]">
-
-                    <Lightbox
-                        open={open2}
-                        close={() => setOpen2(false)}
-                        slides={[
-                        { src: "/images/metal-1.webp" },
-                        { src: "/images/metal-2.webp" },
-                        { src: "/images/metal-3.webp" },
-                        { src: "/images/metal-4.webp" },
-                        { src: "/images/metal-5.webp" },
-                        { src: "/images/metal-6.webp" },
-                        { src: "/images/metal-7.webp" },
-                        { src: "/images/metal-8.webp" },
-                        { src: "/images/metal-9.webp" },
-                        { src: "/images/metal-10.webp" },
-                        { src: "/images/metal-11.webp" },
-                        ]}
-                    />
-
-                    <div className="relative bg-[--blue] w-full h-full rounded-2xl overflow-hidden cursor-pointer" onClick={() => setOpen2(true)}>
+                    <div className="relative bg-[--blue] w-full h-full rounded-2xl overflow-hidden cursor-pointer" onClick={() => {setForm("metalworking"), togglePopup("metalworking");}}>
                         <Image
                             src="/images/metal-working-back.webp"
                             fill
@@ -122,22 +83,7 @@ export default function Services() {
                 </div>
 
                 <div className="card">
-
-                <Lightbox
-                    open={open3}
-                    close={() => setOpen3(false)}
-                    slides={[
-                    { src: "/images/engeneering-1.webp" },
-                    { src: "/images/engeneering-2.webp" },
-                    { src: "/images/engeneering-3.webp" },
-                    { src: "/images/engeneering-4.webp" },
-                    { src: "/images/engeneering-5.webp" },
-                    { src: "/images/engeneering-6.webp" },
-                    { src: "/images/engeneering-7.webp" },
-                    ]}
-                />
-
-                <div className="relative bg-[--blue] w-full h-full rounded-2xl overflow-hidden cursor-pointer" onClick={() => setOpen3(true)}>
+                <div className="relative bg-[--blue] w-full h-full rounded-2xl overflow-hidden cursor-pointer"  onClick={() => {setForm("engeneering"), togglePopup("engeneering");}}>
                     <Image
                         src="/images/engeneering-back.webp"
                         fill
@@ -187,18 +133,7 @@ export default function Services() {
                 </div>*/}
 
                 <div className="card">
-
-                    <Lightbox
-                        open={open5}
-                        close={() => setOpen5(false)}
-                        slides={[
-                        { src: "/images/signage-1.webp" },
-                        { src: "/images/signage-2.webp" },
-                        { src: "/images/signage-3.webp" },
-                        ]}
-                    />
-
-                    <div className="relative bg-[--blue] w-full h-full rounded-2xl overflow-hidden cursor-pointer" onClick={() => setOpen5(true)}>
+                    <div className="relative bg-[--blue] w-full h-full rounded-2xl overflow-hidden cursor-pointer" onClick={() => {setForm("signage"), togglePopup("signage");}}>
                         <Image
                             src="/images/signage-totem-1-back.webp"
                             fill
@@ -217,18 +152,7 @@ export default function Services() {
 
                 <div className="card">
 
-                    <Lightbox
-                        open={open6}
-                        close={() => setOpen6(false)}
-                        slides={[
-                        { src: "/images/40ft-lelato-render-1.webp" },
-                        { src: "/images/40ft-lelato-render-2.webp" },
-                        { src: "/images/20ft-lelato-render-1.webp" },
-                        { src: "/images/kispad-render-1.webp" },
-                        ]}
-                    />
-
-                    <div className="relative bg-[--blue] w-full h-full rounded-2xl overflow-hidden cursor-pointer" onClick={() => setOpen6(true)}>
+                    <div className="relative bg-[--blue] w-full h-full rounded-2xl overflow-hidden cursor-pointer" onClick={() => {setForm("mobilecontainer"), togglePopup("mobilecontainer");}}>
                         <Image
                             src="/images/container-front.webp"
                             fill

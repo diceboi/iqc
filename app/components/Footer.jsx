@@ -22,29 +22,9 @@ export default function Footer() {
     setForm,
   } = useContext(Context);
 
-  const [open, setOpen] = useState(false);
-
   return (
     <>
-      <Modal openstate={openPopup} onClose={() => togglePopup(null)} >
 
-      {form === "cert" && (
-    
-          <div className="space-y-8">
-            <Image
-              src="/certification1.png"
-              width={1920}
-              height={1080}
-              alt="certification1" />
-              <Image
-              src="/certification2.png"
-              width={1920}
-              height={1080}
-              alt="certification2" />
-          </div>
-        
-      )}
-      </Modal>
       <section className="flex container mx-auto py-10">
         <div className="relative bg-gradient-to-br from-[--blue] to-[#77c6eb] min-h-[30vh] w-full cross-top-right">
           <div className="ruled-grid lg:grid-cols-2 h-full">
