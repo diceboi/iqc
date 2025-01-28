@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import MainButton from "./UI/MainButton"
 import SecondaryButton from "./UI/SecondaryButton";
 import { useState } from "react";
-import Modal from "./UI/Modal";
+import YoutubeModal from "./UI/YoutubeModal";
 
 export default function Hero() {
 
@@ -89,7 +89,7 @@ export default function Hero() {
               <h1 className="lg:text-7xl text-5xl font-bold text-bold uppercase font-switzer">together</h1>
             </div>
             <div className="flex lg:flex-row flex-col gap-4 items-center justtify-center pt-10">
-              <Modal isOpen={isModalOpen} closeModal={closeModal} />
+              <YoutubeModal isOpen={isModalOpen} closeModal={closeModal} />
               <MainButton text={"Watch the video"} link={""} onclick={openModal} icon={<FaPlay />} />
             </div>
             

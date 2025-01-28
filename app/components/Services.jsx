@@ -155,7 +155,7 @@ export default function Services() {
                 </div>
 
                 
-                <div className="card">
+                {/*<div className="card">
 
                     <Lightbox
                         open={open4}
@@ -184,7 +184,7 @@ export default function Services() {
                         />
                         <h3 className="absolute right-4 bottom-2 z-10 text-2xl font-switzer font-bold uppercase text-white text-right">Labor Hire</h3>
                     </div>
-                </div>
+                </div>*/}
 
                 <div className="card">
 
