@@ -1,37 +1,97 @@
+'use client';
+
 import { HiMiniDevicePhoneMobile } from "react-icons/hi2";
 import { IoMailOpenOutline } from "react-icons/io5";
-
-import Image from "next/image";
+import Modal from "./UI/Modal";
+import { motion } from "framer-motion";
+import { useContext, useState } from "react";
+import Image from "next/image"; // Correct import
+import Link from "next/link";
+import { Context } from "../Context";
+import { TbPdf } from "react-icons/tb";
 
 export default function Footer() {
-    return(
-        <section className=" flex container mx-auto py-10">
-            <div className="relative bg-gradient-to-br from-[--blue] to-[#77c6eb] min-h-[30vh] w-full cross-top-right">
-                <div className="ruled-grid lg:grid-cols-2 h-full" >
-                    <div className="flex flex-col justify-center items-center gap-4 card text-white">
-                        <h3 className="font-bold font-switzer uppercase text-2xl">Contact Us</h3>
-                        <div className=" font-thin">
-                            <div className="flex flex-nowrap items-center gap-4">
-                            <HiMiniDevicePhoneMobile />
-                            <a href="tel:+36 20 353 8150">+36 20 353 8150</a>
-                            </div>
-                            <div className="flex flex-nowrap items-center gap-4">
-                                <IoMailOpenOutline />
-                                <a href="mailto:hello@iqc-services.hu">hello@iqc-services.hu</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div className="flex justify-center items-center gap-4 card">
-                        <Image src="/images/iso_9001-150x150.png" width={100} height={100} alt="iso 9001"/>
-                        <Image src="/images/iso_14001-150x150.png" width={100} height={100} alt="iso 14001"/>
-                    </div>
+  const {
+    isMobileMenuOpen,
+    toggleMobileMenu,
+    setMobileMenuClose,
+    setMobileMenuOpen,
+    openPopup,
+    togglePopup,
+    form,
+    setForm,
+  } = useContext(Context);
+
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <Modal openstate={openPopup} onClose={() => togglePopup(null)} >
+
+      {form === "cert" && (
+    
+          <div className="space-y-8">
+            <Image
+              src="/certification1.png"
+              width={1920}
+              height={1080}
+              alt="certification1" />
+              <Image
+              src="/certification2.png"
+              width={1920}
+              height={1080}
+              alt="certification2" />
+          </div>
+        
+      )}
+      </Modal>
+      <section className="flex container mx-auto py-10">
+        <div className="relative bg-gradient-to-br from-[--blue] to-[#77c6eb] min-h-[30vh] w-full cross-top-right">
+          <div className="ruled-grid lg:grid-cols-2 h-full">
+            <div className="flex flex-col justify-center items-center gap-4 card text-white">
+              <h3 className="font-bold font-switzer uppercase text-2xl">
+                Contact Us
+              </h3>
+              <div className="font-thin">
+                <div className="flex flex-nowrap items-center gap-4">
+                  <HiMiniDevicePhoneMobile />
+                  <a href="tel:+36 20 353 8150">+36 20 353 8150</a>
                 </div>
-                <div className="flex justify-center items-end">
-                    <p className="text-sm text-gray-500">iQC Services Kft. © 2024</p>
+                <div className="flex flex-nowrap items-center gap-4">
+                  <IoMailOpenOutline />
+                  <a href="mailto:hello@iqc-services.hu">
+                    hello@iqc-services.hu
+                  </a>
                 </div>
+                <div className="flex flex-nowrap items-center gap-4">
+                  <TbPdf />
+                  <button onClick={() => {setForm("cert"), togglePopup("cert");}}>Certifications</button>
+                </div>
+                
+              </div>
             </div>
-            
-        </section>
-    )
+
+            <div className="flex justify-center items-center gap-4 card">
+              <Image
+                src="/images/iso_9001-150x150.png"
+                width={100}
+                height={100}
+                alt="iso 9001"
+              />
+              <Image
+                src="/images/iso_14001-150x150.png"
+                width={100}
+                height={100}
+                alt="iso 14001"
+              />
+              
+            </div>
+          </div>
+          <div className="flex justify-center items-end">
+            <p className="text-sm text-gray-500">iQC Services Kft. © 2024</p>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
