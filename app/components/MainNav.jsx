@@ -154,7 +154,7 @@ export default function MainNav() {
             <div className="space-y-8">
               <h2 className="text-[--blue] font-bold text-2xl">Signage</h2>
               <p><b>TOTEM POLE</b> - Our information totem poles are available in normal, thin, double-sided and outdoor versions with touch screen displays. Their basic color is black, but they can also be ordered in individual colors, with a logo, and with internal lighting. Tempered safety glass protects the screen against possible damage. Its base includes a 10 mm steel plate for stability. They can be used perfectly in shops, showrooms, public areas and exhibitions. If required, it can be supplemented with a printer, camera, bar code, QR code reader.</p>
-              <p><b>WALL DISPLAY</b> - Our digital signage monitors can be operated 24/7. They are available in both standard and interactive/touch screen versions. The brightness of our displays is much higher than conventional television sets. They can be used mounted on the wall in horizontal and vertical versions, as part of an information column or kiosk, or "boxed" for safety reasons. We also offer vandal-proof and smart solutions for outdoor use behind weatherproof, safety tempered glass.</p>
+              <p><b>WALL DISPLAY</b> - Our digital signage monitors can be operated 24/7. They are available in both standard and interactive/touch screen versions. The brightness of our displays is much higher than conventional television sets. They can be used mounted on the wall in horizontal and vertical versions, as part of an information column or kiosk, or &quot;boxed&quot; for safety reasons. We also offer vandal-proof and smart solutions for outdoor use behind weatherproof, safety tempered glass.</p>
               <p><b>KIOSK </b> - With the help of the digital kiosk or information desk, your customers can easily get information about your products and services. Our easy-to-transport, durable, thin, steel-built kiosks are recommended for exhibitions and stores where easy display portability is important. If required, it can be supplemented with a printer, camera, bar code, QR code reader.</p>
               <MainButton
                 text={"Galéria"}
@@ -248,7 +248,7 @@ export default function MainNav() {
           <li onClick={() => {setForm("metalworking"), togglePopup("metalworking");}} className="min-w-fit text-center hover:text-[--blue] hover:underline cursor-pointer">
             Metal working
           </li>
-          <li className="min-w-fit text-center hover:text-[--blue] hover:underline cursor-pointer">
+          <li onClick={() => {setForm("engeneering"), togglePopup("engeneering");}} className="min-w-fit text-center hover:text-[--blue] hover:underline cursor-pointer">
             Engeneering services
           </li>
           <li onClick={() => {setForm("signage"), togglePopup("signage");}} className="min-w-fit text-center hover:text-[--blue] hover:underline cursor-pointer">
@@ -278,17 +278,16 @@ export default function MainNav() {
         transition={{ duration: 0.3 }}
       >
         <ul className="flex flex-col gap-4 text-[--grey] font-bold container mx-auto lg:px-4">
-          <li className="hover:text-[--blue] cursor-pointer">Assembly</li>
-          <li className="hover:text-[--blue] cursor-pointer">
+          <li onClick={() => {setForm("assembly"), togglePopup("assembly");}} className="hover:text-[--blue] cursor-pointer">Assembly</li>
+          <li onClick={() => {setForm("cablemanufacturing"), togglePopup("cablemanufacturing");}} className="hover:text-[--blue] cursor-pointer">
             Cable manufacturing
           </li>
-          <li className="hover:text-[--blue] cursor-pointer">Metal working</li>
-          <li className="hover:text-[--blue] cursor-pointer">
+          <li onClick={() => {setForm("metalworking"), togglePopup("metalworking");}} className="hover:text-[--blue] cursor-pointer">Metal working</li>
+          <li onClick={() => {setForm("engeneering"), togglePopup("engeneering");}} className="hover:text-[--blue] cursor-pointer">
             Engineering services
           </li>
-          <li className="hover:text-[--blue] cursor-pointer">Labor hire</li>
-          <li className="hover:text-[--blue] cursor-pointer">Signage</li>
-          <li className="hover:text-[--blue] cursor-pointer">
+          <li onClick={() => {setForm("signage"), togglePopup("signage");}} className="hover:text-[--blue] cursor-pointer">Signage</li>
+          <li onClick={() => {setForm("mobilecontainer"), togglePopup("mobilecontainer");}} className="hover:text-[--blue] cursor-pointer">
             Mobile container
           </li>
         </ul>
