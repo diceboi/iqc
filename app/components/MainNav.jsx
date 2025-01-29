@@ -76,12 +76,12 @@ export default function MainNav() {
           }}
         >
           <CiMenuBurger
-            className={`min-w-6 min-h-6 ${
+            className={`min-w-6 min-h-6 z-50 ${
               isMobileMenuOpen ? "hidden" : "block"
             }`}
           />
           <TfiClose
-            className={`min-w-6 min-h-6 ${
+            className={`min-w-6 min-h-6 z-50 ${
               isMobileMenuOpen ? "block" : "hidden"
             }`}
           />

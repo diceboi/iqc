@@ -189,7 +189,7 @@ export default function ContextProvider({ children }) {
                   classname={'self-center w-fit'}
                 />
                 <MainButton
-                  text={"PDF Brossure"}
+                  text={"PDF Brossure (HU)"}
                   icon={""}
                   link={"/container-configurator-brossure.pdf"}
                   classname={'self-center w-fit'}
