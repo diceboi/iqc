@@ -12,13 +12,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <ContextProvider>
+      
         <body style={{ fontFamily: 'Syne, sans-serif' }} className='lg:px-4 px-4'>
+          <ContextProvider>
           <MainNav />
           {children}
           <Footer />
+          </ContextProvider>
         </body>
-      </ContextProvider>
+      
     </html>
   );
 }
