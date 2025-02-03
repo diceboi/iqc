@@ -147,7 +147,33 @@ export default function ContextProvider({ children }) {
           )}
 
           {form === "engeneering" && (
-            <></>
+            <>
+            <div className="space-y-8">
+              <h2 className="text-[--blue] font-bold text-2xl">Engeneering services</h2>
+              <p>Every electronic product require mechanical components to function properly. This can be the injection-molded casing in the case of a data collector with a simpler structure, or a machine body that ensures complex movement in the case of more complex robots, target machines. In case of innovative products, the implementation of unique functions often requires unique mechanical design. </p>
+              <p>The creation of the final product requires the close cooperation of engineering disciplines. We work with industrial design offices to develop product concepts and prototype pieces. As soon as the first mechanical concept is formed by validating all aspects, it is manufactured by using rapid prototyping procedures. The mechanical designers take over the validated, working concept and create a product plan, that can be manufactured, complies with regulations, safe to use, and easy to assemble. The end result is a working prototype with all necessary, validated documentions, ready to produce.</p>
+              <MainButton
+                text={"Gallery"}
+                icon={""}
+                link={""}
+                classname={'self-center w-fit'}
+                onclick={() => setOpen3(true)}
+              />
+              <Lightbox
+                    open={open3}
+                    close={() => setOpen3(false)}
+                    slides={[
+                    { src: "/images/engeneering-1.webp" },
+                    { src: "/images/engeneering-2.webp" },
+                    { src: "/images/engeneering-3.webp" },
+                    { src: "/images/engeneering-4.webp" },
+                    { src: "/images/engeneering-5.webp" },
+                    { src: "/images/engeneering-6.webp" },
+                    { src: "/images/engeneering-7.webp" },
+                    ]}
+                />
+            </div>
+            </>
           )}
 
           {form === "signage" && (
