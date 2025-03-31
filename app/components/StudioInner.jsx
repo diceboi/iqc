@@ -14,7 +14,7 @@ import {
 import Lelato20ft from "./3D/Lelato20ft";
 import Kispad20ft from "./3D/Kispad20ft";
 import Lelato40ft1 from "./3D/Lelato40ft1";
-import Lelato40ft2 from "./3D/Lelato40ft2";
+import Studio140 from "./3D/Studio140";
 import { useProgress } from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 
@@ -23,12 +23,12 @@ function Loader() {
   return <Html center>{progress.toFixed(1)}%</Html>;
 }
 
-export default function ConfiguratorInner({
-  chairColor,
-  interiorColor,
-  containerColor,
-}) {
-  const { model } = useContext(Context);
+export default function StudioInner() {
+  const { model, setModel } = useContext(Context);
+
+  useEffect(() => {
+    setModel('studio-bed-140')
+  },[setModel])
 
   return (
     <div className="h-full">
@@ -36,31 +36,41 @@ export default function ConfiguratorInner({
       <CanvasWrapper
         key={model}
         model={model}
-        chairColor={chairColor}
-        interiorColor={interiorColor}
-        containerColor={containerColor}
       />
     </div>
   );
 }
 
-function CanvasWrapper({ model, chairColor, interiorColor, containerColor }) {
+function CanvasWrapper({ model }) {
   return (
     <Canvas
       shadows
-      gl={{ antialias: true, toneMappingExposure: 1 }}
+      gl={{ antialias: true, toneMappingExposure: 0.3}}
       dpr={[1, 2]}
       className="bg-white border border-[--lightgrey] w-full min-h-fit"
       camera={{
         position: [6, 5, 5],
-        fov: 50,
+        fov: 100,
       }}
     >
       {/* Lights */}
-      <ambientLight intensity={1} color={"blue"} />
+
       <directionalLight
         position={[5, 8, 6]}
-        intensity={10}
+        intensity={3}
+        castShadow
+        shadow-mapSize-width={2048}
+        shadow-mapSize-height={2048}
+        shadow-camera-near={1}
+        shadow-camera-far={50}
+        shadow-camera-left={-10}
+        shadow-camera-right={10}
+        shadow-camera-top={10}
+        shadow-camera-bottom={-10}
+      />
+      <directionalLight
+        position={[-5, -8, -6]}
+        intensity={3}
         castShadow
         shadow-mapSize-width={2048}
         shadow-mapSize-height={2048}
@@ -73,46 +83,12 @@ function CanvasWrapper({ model, chairColor, interiorColor, containerColor }) {
       />
 
       {/* HDRI Environment */}
-      <Environment preset="forest" intensity={1} />
+      <Environment preset="warehouse" intensity={1} />
 
-      <EffectComposer>
-        <Bloom
-          intensity={0.5}
-          luminanceThreshold={0.1}
-          luminanceSmoothing={20}
-        />
-      </EffectComposer>
+
 
       {/* Model */}
       <Suspense fallback={<Loader />}>
-        {model === "lelato-20ft" && (
-          <Lelato20ft
-            chairColor={chairColor}
-            interiorColor={interiorColor}
-            containerColor={containerColor}
-          />
-        )}
-        {model === "kispad-20ft" && (
-          <Kispad20ft
-            chairColor={chairColor}
-            interiorColor={interiorColor}
-            containerColor={containerColor}
-          />
-        )}
-        {model === "lelato-40ft-1" && (
-          <Lelato40ft1
-            chairColor={chairColor}
-            interiorColor={interiorColor}
-            containerColor={containerColor}
-          />
-        )}
-        {model === "lelato-40ft-2" && (
-          <Lelato40ft2
-            chairColor={chairColor}
-            interiorColor={interiorColor}
-            containerColor={containerColor}
-          />
-        )}
         {model === "studio-bed-140" && (
           <Studio140 />
         )}
