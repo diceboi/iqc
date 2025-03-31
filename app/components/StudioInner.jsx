@@ -50,7 +50,7 @@ function CanvasWrapper({ model }) {
       className="bg-white border border-[--lightgrey] w-full min-h-fit"
       camera={{
         position: [6, 5, 5],
-        fov: 100,
+        fov: 40,
       }}
     >
       {/* Lights */}
