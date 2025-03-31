@@ -113,9 +113,6 @@ function CanvasWrapper({ model, chairColor, interiorColor, containerColor }) {
             containerColor={containerColor}
           />
         )}
-        {model === "studio-bed-140" && (
-          <Studio140 />
-        )}
       </Suspense>
 
       {/* Orbit Controls */}
